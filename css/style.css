@@ -149,7 +149,8 @@ body {
 }
 
 .index__hero {
-  background: url('../img/bg.jpg') right center no-repeat;
+  height: 900px;
+  background: url('../img/bg.jpg') right top no-repeat;
   background-size: cover;
 }
 
