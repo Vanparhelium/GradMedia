@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/UbuntuCondensed-Regular.woff2') format('woff2'),
+      url('../fonts/UbuntuCondensed-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../fonts/GothamPro.woff2') format('woff2'),
+      url('../fonts/GothamPro.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../fonts/GothamPro-Bold.woff2') format('woff2'),
+      url('../fonts/GothamPro-Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+:root {
+  --white: #ffffff;
+  --green: #A6CE39;
+  --violet: #E400C0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'GothamPro', sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  color: var(--white);
+}
+
+.container {
+  max-width: 1920px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.header__container {
+  width: 100%;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+.header__row {
+  display: flex;
+  align-items: center;
+}
+
+/* .menu {
+} */
+
+.bruger {
+  position: relative;
+}
+
+.bruger::after {
+  position: absolute;
+  content: '';
+  top: 12px;
+}
+
+.bruger::before {
+  position: absolute;
+  content: '';
+  top: -12px;
+}
+
+.bruger,
+.bruger::after,
+.bruger::before {
+  width: 40px;
+  height: 3px;
+  background: #E5E5E5;
+}
+
+
+.logo {
+  height: 56px;
+  width: 238px;
+  margin-left: 100px;
+  background: url('../img/logo.png') center center no-repeat;
+  background-size: contain;
+}
+
+.link-main {
+  display: none;
+  margin: 0 auto;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.call {
+  width: 74px;
+  height: 74px;
+  margin-left: auto;
+  mask-image: url('../img/Subtract.svg');
+  -webkit-mask-image: url('../img/Subtract.svg');
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  mask-position: center;
+  -webkit-mask-position: center;
+  background-color: var(--green);
+}
+
+/* Hero */
+.hero {
+  position: absolute;
+  height: 1200px;
+  width: 100%;
+}
+
+.index__hero {
+  background: url('../img/bg.jpg') right center no-repeat;
+  background-size: cover;
+}
+
+.hero__container {
+  max-width: 1920px;
+  padding-left: 150px;
+}
+
+.main__title {
+  margin-top: 333px;
+  font-size: 52px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.main__text_green {
+  color: var(--green);
+}
+
+.main__text {
+  font-size: 24px;
+  line-height: 23px;
+}
+
+.btn__row {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 24px 30px;
+  border: none;
+  font-family: 'GothamPro', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 17px;
+  color: var(--white);
+  background-color: var(--violet);
+}
+
+.btn__order {
+  transform: rotate(270deg);
+}
