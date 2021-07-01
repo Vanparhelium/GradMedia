@@ -494,5 +494,142 @@ body {
  opacity: 1;
 }
 
+/* section staff */
+.section__staff {
+  padding: 20px 0 120px;
+  background: var(--grey2);
+}
 
+.staff__title {
+  text-align: right;
+  margin: 20px 0 50px;
+  font-size: 177px;
+  line-height: 108px;
+  color: #606060;
+}
 
+.staff__item {
+  width: fit-content;
+  background: var(--dark);
+  padding: 15px 20px;
+}
+
+.staff__item:hover {
+  width: 100%;
+}
+
+.staff__item:not(:first-child) {
+  margin-top: 49px;
+}
+
+.staff__text {
+  margin: 0;
+}
+
+[class*="staff__photo"] {
+  width: 220px;
+  height: 275px;
+  position: relative;
+}
+
+.staff__photo1 {
+  background: url('../img/photo1.jpg') center center no-repeat;
+  background-size: cover;
+  display: none;
+}
+
+.staff__photo2 {
+  background: url('../img/photo2.jpg') center top no-repeat;
+  background-size: cover;
+}
+
+.staff__photo3 {
+  background: url('../img/photo3.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo4 {
+  background: url('../img/photo4.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo5 {
+  background: url('../img/photo5.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo6 {
+  background: url('../img/photo6.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo7 {
+  background: url('../img/photo7.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo8 {
+  background: url('../img/photo8.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo9 {
+  background: url('../img/photo9.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo10 {
+  background: url('../img/photo10.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo11 {
+  background: url('../img/photo11.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo12 {
+  background: url('../img/photo12.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo13 {
+  background: url('../img/photo13.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo14 {
+  background: url('../img/photo14.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo15 {
+  background: url('../img/photo15.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo16 {
+  background: url('../img/photo16.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.staff__photo11::before {
+  position: absolute;
+  content: url('../img/Layer.png');
+  top: 0;
+  right: 20px;
+}
+
+.staff__photo13::after {
+  position: absolute;
+  content: url('../img/fb.png');
+  bottom: 17px;
+  right: 85px;
+}
+
+.staff__photo13::before {
+  position: absolute;
+  content: url('../img/fb2.png');
+  bottom: 17px;
+  right: 10px;
+}
