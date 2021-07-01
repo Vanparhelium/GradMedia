@@ -28,6 +28,9 @@
   --violet: #E400C0;
   --grey: #E5E5E5;
   --darkgrey: #2E2E2E;
+  --grey2: #434343;
+  --dark: #2D2D2D;
+  --litedark: #737373;
 }
 
 * {
@@ -194,6 +197,10 @@ body {
 }
 
 .btn__order {
+  position: fixed;
+  right: -1%;
+  bottom: 10%;
+  z-index: 2;
   transform: rotate(270deg);
 }
 
@@ -245,6 +252,9 @@ body {
   margin: 10px 0;
   font-size: 24px;
   line-height: 23px;
+}
+
+.item__title_uppercase {
   text-transform: uppercase;
 }
 
@@ -256,4 +266,107 @@ body {
 
 .why__item {
   padding-top: 15px;
+}
+
+/* section portfolio */
+.section__portfolio {
+  margin-top: -1px;
+  padding: 13px 0 67px;
+  background: var(--grey2);
+}
+
+.section__portfolio-text {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.portfolio__list {
+  margin-top: 80px;
+  margin-bottom: 66px;
+  display: flex;
+}
+
+.portfolio__item {
+  padding: 0 18px;
+  background-color: var(--dark);
+}
+
+.portfolio__item:not(:first-child) {
+  margin-left: 25px;
+}
+
+.portfolio__item_active {
+  background: #828282;
+}
+
+.section__row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio__box {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: -3px;
+  text-align: center;
+}
+
+.portfolio__box-img_opacity {
+  background: rgba(28, 28, 28, 0.74);
+  mix-blend-mode: multiply;
+  transform: scale(1.5, 1.5);
+  transform-origin: left top;
+}
+
+.portfolio__box-text {
+  position: absolute;
+  top: 30%;
+  left: 18%;
+}
+
+.box__title {
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 56px;
+}
+
+.box__text {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.portfolio__box-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio__box:hover .portfolio__box-img,
+.portfolio__box:focus .portfolio__box-img {
+  transform: scale(1.2, 1.2);
+}
+
+.portfolio__more {
+  position: relative;
+  background-color: var(--litedark);
+  padding: 30px 100px 37px;
+  color: var(--white);
+  font-size: 18px;
+  line-height: 17px;
+}
+
+.portfolio__more:after {
+  position: absolute;
+  content: '';
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-20%, -50%);
+  width: 96px;
+  height: 12px;
+  mask-image: url('../img/Arrow.svg');
+  -webkit-mask-image: url('../img/Arrow.svg');
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  mask-position: center;
+  -webkit-mask-position: center;
+  background-color: var(--white);
 }
