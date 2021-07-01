@@ -154,7 +154,7 @@ body {
 }
 
 .index__hero {
-  height: 900px;
+  height: 100vh;
   background: url('../img/bg.jpg') right top no-repeat;
   background-size: cover;
 }
