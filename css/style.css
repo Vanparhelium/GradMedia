@@ -60,7 +60,7 @@ body {
 
 .container {
   max-width: 1920px;
-  padding: 0 50px;
+  padding: 0 120px;
   margin: 0 auto;
 }
 
@@ -90,7 +90,7 @@ body {
 } */
 
 .bruger {
-  position: relative;
+  position: fixed;
 }
 
 .bruger::after {
@@ -123,8 +123,10 @@ body {
 }
 
 .link-main {
+  position: fixed;
   display: none;
-  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -134,9 +136,10 @@ body {
 }
 
 .call {
+  position: fixed;
   width: 74px;
   height: 74px;
-  margin-left: auto;
+  right: 40px;
   mask-image: url('../img/Subtract.svg');
   -webkit-mask-image: url('../img/Subtract.svg');
   mask-size: cover;
@@ -157,11 +160,6 @@ body {
   height: 100vh;
   background: url('../img/bg.jpg') right top no-repeat;
   background-size: cover;
-}
-
-.hero__container {
-  max-width: 1920px;
-  padding-left: 150px;
 }
 
 .main__title {
@@ -284,6 +282,7 @@ body {
   margin-top: 80px;
   margin-bottom: 66px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .portfolio__item {
