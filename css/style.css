@@ -633,3 +633,27 @@ body {
   bottom: 17px;
   right: 10px;
 }
+
+.brands {
+  background: var(--white);
+}
+
+.brands__container {
+  padding: 65px 0;
+}
+
+.swiper-wrapper {
+  /* height: 135px; */
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide {
+  margin-right: 70px;
+  text-align: center;
+}
+
+.brands__item {
+  width: auto !important;
+}

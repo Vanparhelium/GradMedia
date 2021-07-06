@@ -6,9 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grad Media Group</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer src="js/main.js"></script>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
@@ -135,42 +138,42 @@
           </li>
         </ul>
       </div>
-        <ul class="section__row">
-          <li class="portfolio__box">
-            <img src="img/aksay.jpg" alt="" class="portfolio__box-img portfolio__box-img_opacity">
-            <div class="portfolio__box-text">
-              <p class="box__title">Aksay</p>
-              <p class="box__text">Продуктовая марка</p>
-              <p class="box__text">Landing Page с элементами блога</p>
-            </div>
-            <a href="" class="portfolio__box-link"></a>
-          </li>
-          <li class="portfolio__box">
-            <img src="img/aksay.jpg" alt="" class="portfolio__box-img">
-            <a href="" class="portfolio__box-link"></a>
-          </li>
-          <li class="portfolio__box">
-            <img src="img/slang.jpg" alt="" class="portfolio__box-img">
-            <a href="" class="portfolio__box-link"></a>
-          </li>
-          <li class="portfolio__box">
-            <img src="img/fling.jpg" alt="" class="portfolio__box-img">
-            <a href="" class="portfolio__box-link"></a>
-          </li>
-          <li class="portfolio__box">
-            <img src="img/bigbob.jpg" alt="" class="portfolio__box-img">
-            <a href="" class="portfolio__box-link"></a>
-          </li>
-          <li class="portfolio__box">
-            <img src="img/gedeliks.jpg" alt="" class="portfolio__box-img">
-            <a href="" class="portfolio__box-link"></a>
-          </li>
-        </ul>
-        <div class="section__row">
-          <a href="" class="portfolio__more">
-            <span>Ещё</span>
-          </a>
-        </div>
+      <ul class="section__row">
+        <li class="portfolio__box">
+          <img src="img/aksay.jpg" alt="" class="portfolio__box-img portfolio__box-img_opacity">
+          <div class="portfolio__box-text">
+            <p class="box__title">Aksay</p>
+            <p class="box__text">Продуктовая марка</p>
+            <p class="box__text">Landing Page с элементами блога</p>
+          </div>
+          <a href="" class="portfolio__box-link"></a>
+        </li>
+        <li class="portfolio__box">
+          <img src="img/aksay.jpg" alt="" class="portfolio__box-img">
+          <a href="" class="portfolio__box-link"></a>
+        </li>
+        <li class="portfolio__box">
+          <img src="img/slang.jpg" alt="" class="portfolio__box-img">
+          <a href="" class="portfolio__box-link"></a>
+        </li>
+        <li class="portfolio__box">
+          <img src="img/fling.jpg" alt="" class="portfolio__box-img">
+          <a href="" class="portfolio__box-link"></a>
+        </li>
+        <li class="portfolio__box">
+          <img src="img/bigbob.jpg" alt="" class="portfolio__box-img">
+          <a href="" class="portfolio__box-link"></a>
+        </li>
+        <li class="portfolio__box">
+          <img src="img/gedeliks.jpg" alt="" class="portfolio__box-img">
+          <a href="" class="portfolio__box-link"></a>
+        </li>
+      </ul>
+      <div class="section__row">
+        <a href="" class="portfolio__more">
+          <span>Ещё</span>
+        </a>
+      </div>
     </section>
     <section class="section__more-info">
       <div class="container">
@@ -188,18 +191,20 @@
             </h3>
             <form action="" class="more-info__form">
               <p class="ubuntu__text">Заполните простую форму и получите бесплатную консультацию</p>
-                <div class="contain__row">
-                  <input type="text" name="" id="" placeholder="Наименование компании*" required class="more-info__input col-6">
-                  <input type="text" name="" id="" placeholder="Имя*" required class="more-info__input col-6">
-                  <input type="tel" name="" id="" placeholder="+7 (700) 313-18-66*" required class="more-info__input col-6">
-                  <div class="form__check col-6">
-                    <label class="check__lable">
+              <div class="contain__row">
+                <input type="text" name="" id="" placeholder="Наименование компании*" required
+                  class="more-info__input col-6">
+                <input type="text" name="" id="" placeholder="Имя*" required class="more-info__input col-6">
+                <input type="tel" name="" id="" placeholder="+7 (700) 313-18-66*" required
+                  class="more-info__input col-6">
+                <div class="form__check col-6">
+                  <label class="check__lable">
                     <input type="checkbox" name="check" id="check" checked class="check">
                     <span></span>
                     Даю согласие на сбор и обработку данных</label>
-                  </div>
-                  <input type="submit" value="Получить бесплатную консультацию" class="btn">
                 </div>
+                <input type="submit" value="Получить бесплатную консультацию" class="btn">
+              </div>
             </form>
           </div>
         </div>
@@ -263,6 +268,195 @@
               <div class="staff__photo14"></div>
               <div class="staff__photo15"></div>
               <div class="staff__photo16"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="brands">
+      <div class="brands__container">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide brands__item">
+              <img src="img/libero.png" alt="">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/3m.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/abai.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/acca.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/adeline.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/alprof.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/amgen.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/ariston.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/aviata.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/b1nk.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/bekker.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/bionorica.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/bitoil.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/borusan.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/bosch.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/bsg.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/centercredit.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/centras.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/dorognoe.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/dpd.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/ecomed.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/enza.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/eurasian.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/europa.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/flyget.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/gsk.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/halyk.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/hawaii.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/hlebdar.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/hubert.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/hyndai.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/john.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/jsb.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/kamaz.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/kase.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/kazaktel.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/kazrosgas.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/kixx.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/knauf.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/knigi.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/lamed.png" alt="" class="swiper__img">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide brands__item">
+              <img src="img/lighthous.png" alt="">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/meridian.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/miami.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/ncck.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/nomad.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/npy.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/nvi.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/pfizer.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/profosm.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/qazaq.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/remalux.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/rusradio.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/sbb.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/syngenta.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/stada.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/tek.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/viva.png" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide brands__item">
+              <img src="img/атф-банк.png" alt="" class="swiper__img">
             </div>
           </div>
         </div>
