@@ -2,16 +2,18 @@ window.addEventListener('DOMContentLoaded', function () {
 
   const swiper = new Swiper('.swiper-container', {
     loop: true,
-    slidesPerView: 1,
-      slidesPerGroup: 1,
-      loop: true,
-      loopFillGroupWithBlank: true,
-    speed: 26000,
+    slidesPerView: 15,
+      slidesPerGroup: 5,
+      // loop: true,
+      // loopFillGroupWithBlank: true,
+    speed: 29000,
     centeredSlides: true,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
+      stopOnLastSlide: false,
     },
+    // runCallbacksOnInit:
   });
 
 
