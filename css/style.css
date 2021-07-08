@@ -91,8 +91,14 @@ body {
   align-items: center;
 }
 
-/* .menu {
-} */
+.menu {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 40px;
+  cursor: pointer;
+}
 
 .bruger {
   position: fixed;
@@ -116,8 +122,25 @@ body {
   width: 40px;
   height: 3px;
   background: var(--grey);
+  transition: all .3s ease-in-out;
 }
 
+.menu:hover .bruger::before,
+.menu:focus .bruger::before {
+  background: var(--violet);
+}
+
+.menu:hover .bruger,
+.menu:focus .bruger {
+  width: 30px;
+  background: var(--violet);
+}
+
+.menu:hover .bruger::after,
+.menu:focus .bruger::after {
+  width: 20px;
+  background: var(--violet);
+}
 
 .logo {
   height: 56px;
@@ -125,6 +148,7 @@ body {
   margin-left: 100px;
   background: url('../img/logo.png') center center no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 
 .link-main {
@@ -152,6 +176,14 @@ body {
   mask-position: center;
   -webkit-mask-position: center;
   background-color: var(--green);
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.call:focus ,
+.call:hover {
+  transform: rotate(360deg);
+  background-color: var(--violet);
 }
 
 /* Hero */
@@ -197,6 +229,13 @@ body {
   line-height: 17px;
   color: var(--white);
   background-color: var(--violet);
+  transition: all .3s ease-in-out;
+}
+
+.btn:focus,
+.btn:hover {
+  border-radius: 10px;
+  filter: invert(1);
 }
 
 .btn__order {
@@ -233,6 +272,15 @@ body {
   height: 3px;
   width: 50px;
   background-color: var(--grey);
+}
+
+.btn__order:focus .btn__line::after,
+.btn__order:hover .btn__line::after,
+.btn__order:focus .btn__line::before,
+.btn__order:hover .btn__line::before,
+.btn__order:focus .btn__line,
+.btn__order:hover .btn__line {
+  animation: width 1s ease-in-out both;
 }
 
 /* section why */
@@ -695,7 +743,6 @@ body {
 
 .more-info__bg-rocket {
   position: absolute;
-  z-index: 2;
   top: 60px;
   left: 0;
   bottom: 0;
@@ -781,6 +828,7 @@ body {
   width: 32px;
   height: 32px;
   background-color: var(--grey3);
+  transition: all .3s ease-in-out;
 }
 
 .social__link-insta {
@@ -804,6 +852,12 @@ body {
   -webkit-mask-position: center;
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
+}
+
+.social__link:focus,
+.social__link:hover {
+  transform: rotate(720deg);
+  background-color: var(--violet);
 }
 
 .footer__link-tel {
@@ -906,6 +960,10 @@ body {
     min-height: 650px;
   }
 
+  .btn__order {
+    bottom: 18%;
+  }
+
   .staff__title {
     font-size: 120px;
   }
@@ -948,8 +1006,6 @@ body {
   .container {
     padding: 0 60px;
   }
-
-
 
   .call {
     width: 56px;
@@ -1087,4 +1143,9 @@ body {
   .portfolio__box-text {
     left: 0;
   }
+}
+
+/* index.html-animation */
+@keyframes width {
+  100% { width: 100%;}
 }
