@@ -476,13 +476,13 @@
             <h3 class="section__title more-info__title">Реализуем
               <span class="main__text_green">ваш проект?</span>
             </h3>
-            <form action="" class="more-info__form">
-              <p class="ubuntu__text">Заполните простую форму и получите бесплатную консультацию</p>
+            <form action="" class="project__form">
+              <p class="ubuntu__text">Подайте заявку и с вами свяжется персональный менеджер</p>
               <div class="contain__row">
                 <input type="text" name="" id="" placeholder="Наименование компании*" required
                   class="more-info__input col-6">
                 <input type="text" name="" id="" placeholder="Имя*" required class="more-info__input col-6">
-                <input type="tel" name="" id="" placeholder="+7 (700) 313-18-66*" required
+                <input type="tel" name="" id="phone" placeholder="+7 (700) 313-18-66*" required
                   class="more-info__input col-6">
                 <div class="form__check col-6">
                   <label class="check__lable">
@@ -497,10 +497,58 @@
         </div>
       </div>
     </section>
+    <section class="section__contacts">
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            <div class="contacts">
+              <h4 class="contacts__title">Контакты</h4>
+              <div class="item__title">
+                <span>г. Алматы, проспект Райымбека, 160а, офис 106</span>
+                <a href="tel:+77273131880" class="contacts__link">+7 727 313-18-80</a>
+                <a href="mailto:info@gradmedia.kz" class="contacts__link">info@gradmedia.kz</a>
+              </div>
 
+            </div>
+          </div>
+          <div class="col-7">
+            <div class="contacts__map">
+              <div id="map" style="width: 100%; height: 543px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <a href="index.html">
+            <img src="img/logo2.png" alt="Grand media group" class="footer__logo">
+          </a>
+          <p class="footer__text">Все права защищены, © 2010-2021</p>
+        </div>
+        <div class="footer__contacts col-4">
+          <span>г. Алматы, проспект Райымбека, 160а, офис 106</span>
+          <p class="footer__text">БИН 140540017426</p>
+        </div>
+        <div class="col-2">
+          <a href="tel:+77273131880" class="footer__link footer__link-tel">+7 727 313-18-80</a>
+        </div>
+        <div class="col-3">
+          <a href="mailto:info@gradmedia.kz" class="footer__link">info@gradmedia.kz</a>
+          <i class="social__link social__link-insta"></i>
+          <i class="social__link social__link-fb"></i>
+          <p class="footer__text">Политика конфиденциальности</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+  </script>
 
 </body>
 

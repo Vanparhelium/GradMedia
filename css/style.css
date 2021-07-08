@@ -28,12 +28,13 @@
   --violet: #E400C0;
   --grey: #E5E5E5;
   --grey1: #C4C4C4;
+  --grey3: #BCB5B5;
   --darkgrey: #2E2E2E;
   --grey2: #434343;
   --dark: #2D2D2D;
   --litedark: #737373;
   --liteblack: #323232;
-
+  --black: #353535;
 }
 
 * {
@@ -255,7 +256,7 @@ body {
 .item__title {
   margin: 10px 0;
   font-size: 24px;
-  line-height: 23px;
+  line-height: 36px;
 }
 
 .item__title_uppercase {
@@ -663,10 +664,11 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 50%;
   background: url('../img/rocket.png') left 60px no-repeat;
 }
 
+/* section project*/
 .section__project {
   position: relative;
   padding-bottom: 75px;
@@ -690,3 +692,104 @@ body {
   height: auto;
 }
 
+/* .section contacts */
+.section__contacts {
+  background: var(--litedark);
+}
+
+.contacts {
+  padding: 120px 0;
+  color: var(--grey);
+}
+
+.contacts__title {
+  margin: 10px 0 70px;
+  font-size: 36px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__link {
+  margin-top: 30px;
+  display: block;
+  color: var(--grey);
+}
+
+
+[class*="ground-pane"] {
+  filter: invert(100%) hue-rotate(50deg) saturate(100%);
+}
+
+[class*="controls-pane"] {
+  display: none;
+}
+
+[class*="copyrights-pane"] {
+  display: none;
+}
+
+.footer {
+  background: var(--black);
+  padding: 70px 0 100px;
+  color: var(--grey3);
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.footer__logo {
+  margin-top: -50%;
+}
+
+.footer__contacts {
+  text-align: right;
+}
+
+.footer__link {
+  color: var(--grey3);
+}
+
+.footer__text {
+  margin-top: 25px;
+}
+
+.social__link {
+  display: inline-block;
+  margin-top: -100%;
+  margin-left: 20px;
+  width: 32px;
+  height: 32px;
+  background-color: var(--grey3);
+}
+
+.social__link-insta {
+  margin-left: 50px;
+  mask-image: url('../img/insta.svg');
+  -webkit-mask-image: url('../img/insta.svg');
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.social__link-fb {
+  mask-image: url('../img/fb.svg');
+  -webkit-mask-image: url('../img/fb.svg');
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.footer__link-tel {
+  display: block;
+  text-align: center;
+}

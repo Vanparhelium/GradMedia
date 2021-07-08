@@ -1,54 +1,38 @@
 window.addEventListener('DOMContentLoaded', function () {
 
+  if (document.querySelector('.swiper-container')) {
   const swiper = new Swiper('.swiper-container', {
     loop: true,
-    slidesPerView: 15,
-      slidesPerGroup: 5,
-      // loop: true,
-      // loopFillGroupWithBlank: true,
-    speed: 29000,
+    slidesPerView: 6,
+      slidesPerGroup: 6,
+    speed: 20000,
     centeredSlides: true,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
       stopOnLastSlide: false,
     },
-    // runCallbacksOnInit:
   });
+};
 
+  if (document.querySelector('#map')) {
+    ymaps.ready(init);
+    function init() {
+      var myMap = new ymaps.Map("map", {
+        center: [43.269, 76.927],
+        zoom: 17,
+        controls: []
+      });
 
-
-
-  // var swiper = new Swiper('.swiper-container', {
-  //   slidesPerView: 3,
-  //   direction: getDirection(),
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  //   on: {
-  //     resize: function () {
-  //       swiper.changeDirection(getDirection());
-  //     },
-  //   },
-  // });
-
-  // function getDirection() {
-  //   var windowWidth = window.innerWidth;
-  //   var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-
-  //   return direction;
-  // }
-
-  // var swiper = new Swiper(".mySwiper", {
-  //   slidesPerView: 4,
-  //   spaceBetween: 30,
-  //   centeredSlides: true,
-  //   pagination: {
-  //     el: ".swiper-pagination",
-  //     clickable: true,
-  //   },
-  // });
+        var myPlacemark = new ymaps.Placemark([43.268707074529516,76.92616949999999], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/marker.png',
+        iconImageSize: [89, 89],
+        iconImageOffset: [-3, -42]
+      });
+      myMap.geoObjects.add(myPlacemark);
+    };
+  };
 
 
 });
