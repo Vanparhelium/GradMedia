@@ -897,6 +897,10 @@ body {
     padding: 15px 20px;
   }
 
+  .header {
+    height: 120px;
+  }
+
   .staff__title {
     font-size: 120px;
   }
@@ -940,12 +944,9 @@ body {
     padding: 0 60px;
   }
 
-  .header {
-    height: 120px;
-  }
-
   .hero {
     padding-top: 200px;
+    min-height: 650px;
   }
 
   .call {
