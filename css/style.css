@@ -634,10 +634,11 @@ body {
   display: inline-block;
   background: var(--dark);
   padding: 15px 20px;
+  transition: background .3s ease-in-out;
 }
 
 .staff__item:hover {
-  width: 100%;
+  background: var(--darkgrey);
   text-align: center;
 }
 
