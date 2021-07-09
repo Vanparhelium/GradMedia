@@ -1,14 +1,8 @@
 window.addEventListener('DOMContentLoaded', function () {
 
   if (document.querySelector('#menu')) {
-  document.querySelector('#menu').addEventListener('click', function () {
-    document.querySelector('.menu__list').classList.toggle('menu__list_visible');
-    document.querySelector('#burger').classList.toggle('burger');
-    document.querySelector('#burger').classList.toggle('burger__close');
-  });
-  };
 
-  if (document.querySelector('#callback')) {
+    const menu = document.querySelector('.menu__list');
     const modal = document.querySelector('#modalCall');
     const modalBtn = document.querySelector('#callback');
     const closeBtn = document.querySelector('#close');
@@ -18,7 +12,6 @@ window.addEventListener('DOMContentLoaded', function () {
     const siteBtn = document.querySelector('#siteBtn');
     const modalSite = document.querySelector('#modalSite')
     const closeOrder = document.querySelector('#closeOrder');
-
 
 
     modalBtn.addEventListener('click', openModal);
@@ -31,11 +24,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
     function openModal() {
-      modal.classList.add('modal__active');
+      modal.classList.add('active');
       document.querySelectorAll('.modal__content').forEach(function (remActive) {
         remActive.classList.remove('modal__content_active');
       });
-      modalBg.classList.add('modal__active');
+      modalBg.classList.add('active');
       document.querySelector('.modal__content-step').classList.add('modal__content_active');
     };
 
@@ -45,27 +38,105 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     function closeModal() {
-      modal.classList.remove('modal__active');
-      modalBg.classList.remove('modal__active');
+      modal.classList.remove('active');
+      modalBg.classList.remove('active');
     };
 
     function openModalSite() {
-      modalSite.classList.add('modal__active');
-      modalBg.classList.add('modal__active');
+      modalSite.classList.add('active');
+      modalBg.classList.add('active');
     };
 
     function closeModalSite() {
-      modalSite.classList.remove('modal__active');
-      modalBg.classList.remove('modal__active');
+      modalSite.classList.remove('active');
+      modalBg.classList.remove('active');
     };
 
     function outsideClick(e) {
       if (e.target === modalBg) {
-        modal.classList.remove('modal__active');
-        modalSite.classList.remove('modal__active');
-        modalBg.classList.remove('modal__active');
+        modal.classList.remove('active');
+        modalSite.classList.remove('active');
+        modalBg.classList.remove('active');
       };
     };
+
+    document.querySelector('#menu').addEventListener('click', function () {
+      document.querySelector('.menu__list').classList.toggle('menu__list_visible');
+      document.querySelector('#burger').classList.toggle('burger');
+      document.querySelector('#burger').classList.toggle('burger__close');
+    });
+
+  };
+
+
+  // sorting portfolio
+  if (document.querySelector('.section__portfolio')) {
+
+    let tabsPort = document.querySelectorAll('.portfolio__item');
+    let previews = document.querySelectorAll('.portfolio__box');
+
+    for (let tabPort of tabsPort) {
+      tabPort.addEventListener('click', function () {
+        tabsPort.forEach(function(rem) {
+          rem.classList.remove('portfolio__item_active');
+        });
+        tabPort.classList.add('portfolio__item_active');
+
+        if (tabPort.dataset.path === 'allworks') {
+          previews.forEach(function (content) {
+            content.classList.add('visible');
+          });
+        };
+
+        if (tabPort.dataset.path === 'landings') {
+          previews.forEach(function (content) {
+            content.classList.remove('visible');
+            for (let prewiev of previews) {
+              if (prewiev.dataset.work === 'landings') {
+                prewiev.classList.add('visible');
+              };
+            };
+          });
+        };
+
+        if (tabPort.dataset.path === 'corporate') {
+          previews.forEach(function (content) {
+            content.classList.remove('visible');
+            for (let prewiev of previews) {
+              if (prewiev.dataset.work === 'corporate') {
+                prewiev.classList.add('visible');
+              };
+            };
+          });
+        };
+
+        if (tabPort.dataset.path === 'stores') {
+          previews.forEach(function (content) {
+            content.classList.remove('visible');
+            for (let prewiev of previews) {
+              if (prewiev.dataset.work === 'stores') {
+                prewiev.classList.add('visible');
+              };
+            };
+          });
+        };
+
+      });
+    };
+
+    // document.querySelectorAll('.portfolio__item').forEach(function (tabsBtn) {
+    //   tabsBtn.addEventListener('click', function(event) {
+    //     const path = event.currentTarget.dataset.path
+    //     document.querySelectorAll('.portfolio__item').forEach(function(rem) {
+    //       rem.classList.remove('portfolio__item_active');
+    //     });
+    //     tabsBtn.classList.add('portfolio__item_active');
+    //     document.querySelectorAll('.portfolio__box').forEach(function(tabContent) {
+    //       tabContent.classList.remove('visible')
+    //     });
+    //     document.querySelector(`[data-work="${path}"]`).classList.add('visible');
+    //   });
+    // });
   };
 
 
