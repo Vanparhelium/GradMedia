@@ -18,13 +18,18 @@
 <body>
   <header class="header">
     <div class="header__container">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="" class="menu__link">Разработка сайтов </a></li>
+        <li class="menu__item"><a href="" class="menu__link">Портфолио</a></li>
+        <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+      </ul>
       <div class="header__row">
-        <div class="menu">
-          <div class="bruger"></div>
+        <div class="menu" id="menu">
+          <div class="burger" id="burger"></div>
         </div>
         <div class="logo"></div>
         <a href="index.html" class="link-main">вернуться на главную</a>
-        <div class="call"></div>
+        <div class="call" id="callback"></div>
       </div>
     </div>
   </header>
@@ -38,7 +43,7 @@
         <p class="main__text col-xxl-4">Без шаблонных решений, унылого дизайна, изготовленный и протестированный точно в
           срок.</p>
         <div class="btn__row">
-          <button class="btn">Да, мне нужен новый сайт</button>
+          <button class="btn" id="siteBtn">Да, мне нужен новый сайт</button>
           <button class="btn btn__order">
             <div class="btn__line"></div>
             заказать сайт
@@ -544,6 +549,45 @@
     </div>
   </footer>
 
+  <!-- madals -->
+<div class="modal-bg"></div>
+<div class="main-modal__tel col-12 col-lg-8 col-xxl-6" id="modalCall">
+  <div class="close__btn">
+    <div class="close" id="close"></div>
+  </div>
+  <div class="modal__content modal__content-step modal__content_active">
+    <a href="tel:+77273131880" class="modal__link-tel item__title">8 707 151 1511</a>
+    <div class="modal__row">
+      <a href="tel:+77273131880" class="btn modal__tel-btn item__title_uppercase">Позвонить</a>
+      <div class="btn modal__tel-btn item__title_uppercase" id="recall">Заказать звонок</div>
+    </div>
+  </div>
+  <div class="modal__content modal__content-step2">
+    <p class="modal__title">Оставьте заявку
+      Мы перезвоним вам!</p>
+    <form action="" method="post" class="modal__form">
+      <input type="text" name="recall-name" id="recallName" class="modal__input" required placeholder="Имя*">
+      <input type="text" name="recall-company" id="recallCompany" class="modal__input" required placeholder="Наименование компании*">
+      <input type="tel" name="recall-phone" id="recallPhone" class="modal__input" required placeholder="Телефон*">
+      <button type="submit" class="btn modal__form-btn item__title_uppercase">Заказать звонок</button>
+    </form>
+  </div>
+</div>
+<div class="main-modal__site col-12 col-lg-8 col-xxl-6" id="modalSite">
+  <div class="close__btn">
+    <div class="close" id="closeOrder"></div>
+  </div>
+  <div class="modal__content modal__content_visability">
+    <p class="modal__title">Оставьте заявку
+      Мы перезвоним вам!</p>
+    <form action="" method="post" class="modal__form">
+      <input type="text" name="recall-name" id="siteName" class="modal__input" required placeholder="Имя*">
+      <input type="text" name="recall-company" id="siteCompany" class="modal__input" required placeholder="Наименование компании*">
+      <input type="tel" name="recall-phone" id="sitePhone" class="modal__input" required placeholder="Телефон*">
+      <button type="submit" class="btn modal__form-btn item__title_uppercase">Заказать сайт</button>
+    </form>
+  </div>
+</div>
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
   </script>
