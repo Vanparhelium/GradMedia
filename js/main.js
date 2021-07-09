@@ -78,9 +78,9 @@ window.addEventListener('DOMContentLoaded', function () {
     for (let tabPort of tabsPort) {
       tabPort.addEventListener('click', function () {
         tabsPort.forEach(function(rem) {
-          rem.classList.remove('portfolio__item_active');
+          rem.classList.remove('item-active');
         });
-        tabPort.classList.add('portfolio__item_active');
+        tabPort.classList.add('item-active');
 
         if (tabPort.dataset.path === 'allworks') {
           previews.forEach(function (content) {
@@ -128,15 +128,135 @@ window.addEventListener('DOMContentLoaded', function () {
     //   tabsBtn.addEventListener('click', function(event) {
     //     const path = event.currentTarget.dataset.path
     //     document.querySelectorAll('.portfolio__item').forEach(function(rem) {
-    //       rem.classList.remove('portfolio__item_active');
+    //       rem.classList.remove('item-active');
     //     });
-    //     tabsBtn.classList.add('portfolio__item_active');
+    //     tabsBtn.classList.add('item-active');
     //     document.querySelectorAll('.portfolio__box').forEach(function(tabContent) {
     //       tabContent.classList.remove('visible')
     //     });
     //     document.querySelector(`[data-work="${path}"]`).classList.add('visible');
     //   });
     // });
+  };
+
+  // sorting staff
+  if (document.querySelector('.staff__list')) {
+
+    let staffs = document.querySelectorAll('.staff__item');
+    let photos =document.querySelectorAll('.staff__photo');
+
+    for (let staff of staffs) {
+      staff.addEventListener('click', function () {
+        staffs.forEach(function (delAct) {
+          delAct.classList.remove('item-active');
+        });
+        staff.classList.add('item-active');
+           photos.forEach(function (filter) {
+            filter.classList.remove('filter');
+           });
+
+         if (staff.dataset.staff === 'designer') {
+           photos.forEach(function (filter) {
+             filter.classList.remove('filter');
+             for (let photo of photos) {
+               if (photo.dataset.photo === 'designer') {
+                 photo.classList.add('filter');
+               }
+             };
+           });
+         };
+
+         if (staff.dataset.staff === 'layoutdes') {
+          photos.forEach(function (filter) {
+            filter.classList.remove('filter');
+            for (let photo of photos) {
+              if (photo.dataset.photo === 'layoutdes') {
+                photo.classList.add('filter');
+              }
+            };
+          });
+        };
+
+        if (staff.dataset.staff === 'developers') {
+          photos.forEach(function (filter) {
+            filter.classList.remove('filter');
+            for (let photo of photos) {
+              if (photo.dataset.photo === 'developers') {
+                photo.classList.add('filter');
+              }
+            };
+          });
+        };
+
+        if (staff.dataset.staff === 'seo') {
+          photos.forEach(function (filter) {
+            filter.classList.remove('filter');
+            for (let photo of photos) {
+              if (photo.dataset.photo === 'seo') {
+                photo.classList.add('filter');
+              }
+            };
+          });
+        };
+
+        if (staff.dataset.staff === 'copywriter') {
+          photos.forEach(function (filter) {
+            filter.classList.remove('filter');
+            for (let photo of photos) {
+              if (photo.dataset.photo === 'copywriter') {
+                photo.classList.add('filter');
+              }
+            };
+          });
+        };
+
+        if (staff.dataset.staff === 'director') {
+          photos.forEach(function (filter) {
+            filter.classList.remove('filter');
+            for (let photo of photos) {
+              if (photo.dataset.photo === 'director') {
+                photo.classList.add('filter');
+              }
+            };
+          });
+        };
+
+        if (staff.dataset.staff === 'manager') {
+          photos.forEach(function (filter) {
+            filter.classList.remove('filter');
+            for (let photo of photos) {
+              if (photo.dataset.photo === 'manager') {
+                photo.classList.add('filter');
+              }
+            };
+          });
+        };
+
+        if (staff.dataset.staff === 'targetologist') {
+          photos.forEach(function (filter) {
+            filter.classList.remove('filter');
+            for (let photo of photos) {
+              if (photo.dataset.photo === 'targetologist') {
+                photo.classList.add('filter');
+              }
+            };
+          });
+        };
+
+        if (staff.dataset.staff === 'context') {
+          photos.forEach(function (filter) {
+            filter.classList.remove('filter');
+            for (let photo of photos) {
+              if (photo.dataset.photo === 'context') {
+                photo.classList.add('filter');
+              }
+            };
+          });
+        };
+
+
+       });
+    };
   };
 
 
