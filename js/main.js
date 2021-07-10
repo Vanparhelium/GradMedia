@@ -281,11 +281,17 @@ window.addEventListener('DOMContentLoaded', function () {
       slidesPerGroup: 6,
     speed: 20000,
     centeredSlides: true,
+    updateOnWindowResize: false,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
       stopOnLastSlide: false,
     },
+    // breakpoints: {
+    //   640: {
+    //     height: 20
+    //   }
+    // }
   });
 };
 
