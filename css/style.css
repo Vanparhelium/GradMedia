@@ -1293,8 +1293,39 @@ body {
     padding: 0 20px;
   }
 
+  .logo {
+    height: 30px;
+    width: 190px;
+    margin-left: 60px;
+  }
+
   .hero {
-    padding-top: 120px;
+    padding-top: 80px;
+  }
+
+  .header {
+    height: 70px;
+  }
+
+  .burger,
+  .burger::after,
+  .burger::before {
+    width: 30px;
+    height: 2px;
+  }
+
+  .burger::before {
+    top: -10px;
+  }
+
+  .burger::after {
+    top: 10px;
+  }
+
+  .call {
+    width: 32px;
+    height: 32px;
+    right: 15px;
   }
 
   .btn {
@@ -1328,12 +1359,12 @@ body {
   }
 
   .main__title {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .main__text {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 16px;
     text-shadow: 2px 2px 2px black;
   }
 
