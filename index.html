@@ -17,6 +17,7 @@
 
 <body>
   <header class="header">
+    <div class="logo"></div>
     <div class="header__container">
       <ul class="menu__list">
         <li class="menu__item"><a href="" class="menu__link">Разработка сайтов </a></li>
@@ -27,7 +28,7 @@
         <div class="menu" id="menu">
           <div class="burger" id="burger"></div>
         </div>
-        <div class="logo"></div>
+
         <a href="index.html" class="link-main">вернуться на главную</a>
         <div class="call" id="callback"></div>
       </div>
@@ -36,6 +37,7 @@
   <main class="main">
     <section class="hero index__hero">
       <div class="container">
+
         <h1 class="main__title col-xxl-7 col-xl-12">ВАМ НУЖЕН
           <span class="main__text_green">САЙТ,<br> ПРИНОСЯЩИЙ КЛИЕНТОВ</span><br>
           В ВАШ БИЗНЕС КАЖДЫЙ ДЕНЬ?
@@ -45,7 +47,7 @@
         <div class="btn__row">
           <button class="btn" id="siteBtn">Да, мне нужен новый сайт</button>
           <button class="btn btn__order">
-            <div class="btn__line"></div>
+            <span class="btn__line"></span>
             заказать сайт
           </button>
         </div>
@@ -62,7 +64,7 @@
                 <span class="main__text_green">К нам?</span>
               </h3>
             </div>
-            <img src="img/Frame.png" class="why__bg">
+            <img src="img/Frame.png" class="why__bg" alt="ноутбук">
           </div>
           <div class="col-xxl-6">
             <ul>
@@ -197,10 +199,10 @@
             <form action="https://jsonplaceholder.typicode.com/posts" class="more-info__form">
               <p class="ubuntu__text">Заполните простую форму и получите бесплатную консультацию</p>
               <div class="contain__row">
-                <input type="text" name="" id="" placeholder="Наименование компании*" required
+                <input type="text" name="consult-company" id="consultCompany" placeholder="Наименование компании*" required
                   class="more-info__input col-lg-6 col-12">
-                <input type="text" name="" id="" placeholder="Имя*" required class="more-info__input col-lg-6 col-12">
-                <input type="tel" name="" id="" placeholder="+7 (700) 313-18-66*" required
+                <input type="text" name="consult-name" id="consultName" placeholder="Имя*" required class="more-info__input col-lg-6 col-12">
+                <input type="tel" name="consult-tel" id="consultTel" placeholder="+7 (700) 313-18-66*" required
                   class="more-info__input col-lg-6 col-12">
                 <div class="form__check col-lg-6 col-12">
                   <label class="check__lable">
@@ -278,7 +280,7 @@
         </div>
       </div>
     </section>
-    <section class="brands">
+    <div class="brands">
       <div class="brands__container">
         <div class="swiper-container">
           <div class="swiper-wrapper">
@@ -466,7 +468,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <section class="section__more-info section__project">
      <div class="col-xxl-5">
         <div class="more-info__bg project__bg">
@@ -482,10 +484,10 @@
             <form action="https://jsonplaceholder.typicode.com/posts" class="project__form">
               <p class="ubuntu__text">Подайте заявку и с вами свяжется персональный менеджер</p>
               <div class="contain__row">
-                <input type="text" name="" id="" placeholder="Наименование компании*" required
+                <input type="text" name="company" id="projectCompany" placeholder="Наименование компании*" required
                   class="more-info__input col-lg-6 col-12">
-                <input type="text" name="" id="" placeholder="Имя*" required class="more-info__input col-lg-6 col-12">
-                <input type="tel" name="" id="phone" placeholder="+7 (700) 313-18-66*" required
+                <input type="text" name="name" id="projectName" placeholder="Имя*" required class="more-info__input col-lg-6 col-12">
+                <input type="tel" name="phone" id="phone" placeholder="+7 (700) 313-18-66*" required
                   class="more-info__input col-lg-6 col-12">
                 <div class="form__check col-lg-6 col-12">
                   <label class="check__lable">
@@ -530,7 +532,7 @@
           <a href="index.html">
             <img src="img/logo2.png" alt="Grand media group" class="footer__logo">
           </a>
-          <p class="footer__text">Все права защищены,<nobr> &#169; 2010-2021</nobr></p>
+          <p class="footer__text">Все права защищены, &#169;&nbsp; 2010-2021</p>
         </div>
         <div class="footer__contacts col-xxl-4 col-lg-6 col-12">
           <span>г. Алматы, проспект Райымбека, 160а, офис 106</span>

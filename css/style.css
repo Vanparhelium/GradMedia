@@ -315,6 +315,7 @@ body {
 }
 
 .btn__line {
+  display: block;
   margin-bottom: 10px;
   position: relative;
   height: 3px;
