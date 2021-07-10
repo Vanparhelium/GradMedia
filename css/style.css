@@ -78,14 +78,20 @@ body {
   height: 230px;
   display: flex;
   align-items: center;
-  z-index: 1;
+  z-index: 6;
 }
 
 .header__container {
+  position: fixed;
   width: 100%;
-  padding: 0 50px;
+  padding: 50px;
   margin: 0 auto;
 }
+
+.header__container_gray {
+  background: rgba(0, 0, 0, .7);
+}
+
 
 .header__row {
   display: flex;
@@ -1181,6 +1187,7 @@ body {
 
   .main__title {
     font-size: 38px;
+    text-shadow: 3px 3px 3px black;
   }
 
   .section__title {
@@ -1233,7 +1240,7 @@ body {
   }
 
   .header__container {
-    padding: 0 15px;
+    padding: 32px 15px;
   }
 
   .container {
@@ -1249,11 +1256,13 @@ body {
   .section__title {
     font-size: 42px;
     line-height: 48px;
+    text-shadow: 3px 3px 3px black;
   }
 
   .staff__title {
     font-size: 98px;
     line-height: 86px;
+    text-shadow: 3px 3px 3px black;
 }
 
   [class*="staff__photo"] {
@@ -1324,6 +1333,7 @@ body {
   .main__text {
     font-size: 16px;
     line-height: 20px;
+    text-shadow: 2px 2px 2px black;
   }
 
   .section__title {

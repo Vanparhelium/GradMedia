@@ -2,6 +2,20 @@ window.addEventListener('DOMContentLoaded', function () {
 
   if (document.querySelector('#menu')) {
 
+
+    window.onscroll = function () {
+      let menuBg = document.querySelector('.header__container');
+      let scroll = window.pageYOffset;
+      let coord = document.documentElement.clientHeight;
+      if (scroll > coord) {
+        console.log('hi');
+        menuBg.classList.add('header__container_gray');
+      };
+      if (scroll < coord) {
+        menuBg.classList.remove('header__container_gray');
+      };
+    };
+
     const menu = document.querySelector('.menu__list');
     const modal = document.querySelector('#modalCall');
     const modalBtn = document.querySelector('#callback');
