@@ -212,7 +212,7 @@ body {
 .logo {
   height: 56px;
   width: 238px;
-  margin-left: 100px;
+  margin-left: 10px;
   background: url('../img/logo.png') center center no-repeat;
   background-size: contain;
   cursor: pointer;
@@ -255,7 +255,7 @@ body {
 
 /* Hero */
 .hero {
-  padding-top: 330px;
+  padding-top: 280px;
   height: 1200px;
   width: 100%;
 }
@@ -497,39 +497,31 @@ body {
 
 /* section more-info */
 .section__more-info {
+  position: relative;
   background: var(--liteblack);
   padding-top: 60px;
+  padding-bottom: 75px;
 }
 
 .more-info__bg {
   position: relative;
-  height: 590px;
+  position: initial;
+  height: auto;
+}
+
+.more-info__img {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  width: 50%;
 }
 
 .more-info__bg-gagarin {
-  position: absolute;
+  /* position: absolute;
   height: 100%;
-  width: 100%;
+  width: 100%; */
   background: url('../img/gagarin.png') center bottom no-repeat;
-  background-size: contain;
-}
-
-.more-info__bg-grin {
-  position: absolute;
-  width: 350px;
-  height: 400px;
-  top: 20px;
-  background: url('../img/shapeltek1.png') center bottom no-repeat;
-  background-size: contain;
-}
-
-.more-info__bg-pink {
-  position: absolute;
-  height: 208px;
-  width: 270px;
-  bottom: 0;
-  left: 40%;
-  background: url('../img/shapeltek.png') center bottom no-repeat;
   background-size: contain;
 }
 
@@ -811,22 +803,13 @@ body {
 }
 
 /* section project*/
-.section__project {
-  position: relative;
-  padding-bottom: 75px;
-}
-
-.project__bg {
-  position: initial;
-  height: auto;
-}
 
 .more-info__bg-rocket {
-  position: absolute;
+  /* position: absolute;
   top: 60px;
   left: 0;
   bottom: 0;
-  width: 50%;
+  width: 50%; */
   background: url('../img/rocket.svg') left bottom no-repeat;
   background-size: contain;
 }
@@ -964,7 +947,6 @@ body {
 [class*="main-modal"] {
   position: fixed;
   max-width: 650px;
-  opacity: 0;
   visibility: hidden;
   left: 50%;
   top: 50%;
@@ -1080,7 +1062,7 @@ body {
   text-align: center;
 }
 
- .more-info__bg-rocket {
+ .more-info__img {
   filter: brightness(0.5);
  }
 
@@ -1169,6 +1151,10 @@ body {
     padding-top: 200px;
     min-height: 650px;
   } */
+
+  .more-info__bg {
+    height: 195px;
+  }
 
   .menu__list {
     padding: 120px 0 0 50px;
@@ -1271,14 +1257,6 @@ body {
     height: 220px;
   }
 
-  .more-info__bg-pink {
-    width: 180px;
-  }
-
-  .more-info__bg-grin {
-    width: 230px;
-  }
-
   .modal__tel-btn:not(:first-child) {
     margin-top: 20px;
   }
@@ -1341,26 +1319,15 @@ body {
     padding: 30px;
   }
 
-  .more-info__bg {
-    height: 195px;
-  }
-
-  .more-info__bg-pink {
-    top: 70px;
-    width: 70px;
-    height: 100px;
-  }
-
-  .more-info__bg-grin {
-    width: 175px;
-    height: 120px;
-  }
-
   .section__more-info {
     padding-top: 0;
   }
 
-  .project__bg {
+  /* .project__bg {
+    height: 30px;
+  } */
+
+  .more-info__bg {
     height: 30px;
   }
 
