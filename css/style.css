@@ -1530,7 +1530,12 @@ body {
    .footer__logo {
     margin-top: 25px;
   }
+}
 
+@media (max-width: 576px) {
+  .index__hero {
+    height: 100vh;
+  }
 }
 
 /* index.html-animation */
