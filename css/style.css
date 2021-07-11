@@ -1073,7 +1073,7 @@ body {
 }
 
  .section__img {
-  filter: brightness(0.5);
+  filter: brightness(0.3);
  }
 
  .social__link {
@@ -1157,10 +1157,6 @@ body {
     height: 120px;
   }
 
-  .section__bg {
-    height: 195px;
-  }
-
   .menu__list {
     padding: 120px 0 0 50px;
   }
@@ -1195,9 +1191,9 @@ body {
     margin-bottom: 50px;
   }
 
-  .footer__logo {
+  /* .footer__logo {
     margin-top: 50px;
-  }
+  } */
 
   [class*="main-modal"] {
     padding: 20px 50px;
