@@ -1147,11 +1147,6 @@ body {
     height: 120px;
   }
 
-  /* .hero {
-    padding-top: 200px;
-    min-height: 650px;
-  } */
-
   .more-info__bg {
     height: 195px;
   }
@@ -1379,7 +1374,7 @@ body {
   .item__title {
     margin: 0;
     padding: 3px;
-    text-align: center;
+    /* text-align: center; */
     font-size: 14px;
     line-height: 16px;
   }
@@ -1499,10 +1494,19 @@ body {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 620px) {
   .index__hero {
-    height: 100vh;
+    height: 650px;
   }
+
+  .hero {
+    min-height: 650px;
+    padding-top: 200px;
+  }
+
+  .btn__row {
+    margin-top: 150px;
+}
 }
 
 /* index.html-animation */
