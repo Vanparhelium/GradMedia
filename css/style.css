@@ -1366,7 +1366,7 @@ body {
 
   .item__title {
     margin: 0;
-    padding: 3px;
+    padding: 6px;
     font-size: 14px;
     line-height: 16px;
   }
@@ -1379,7 +1379,7 @@ body {
   .item__text {
       margin: 10px 0;
       font-size: 12px;
-      line-height: 14px;
+      line-height: 18px;
   }
 
   .ubuntu__text {
@@ -1483,7 +1483,7 @@ body {
    .footer {
      padding: 30px 0;
      font-size: 12px;
-     line-height: 10px;
+     line-height: 16px;
    }
 
    .footer__logo {
@@ -1509,4 +1509,21 @@ body {
 /* index.html-animation */
 @keyframes width {
   100% { width: 100%;}
+}
+
+/* -----------------------------------thanks.html style -----------------------------------*/
+.header__relative {
+  position: relative;
+}
+
+.thanks__title {
+  font-size: 5vw;
+}
+
+.thanks {
+  padding: 15vw 0;
+}
+
+.btn__big {
+  margin-top: 100px;
 }
