@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', function () {
       if (scroll > coord) {
         console.log('hi');
         menuBg.classList.add('header__container_gray');
+        menuBg.style.top = 0;
       };
       if (scroll < coord) {
         menuBg.classList.remove('header__container_gray');
@@ -273,7 +274,6 @@ window.addEventListener('DOMContentLoaded', function () {
     };
   };
 
-
   if (document.querySelector('.swiper-container')) {
   const swiper = new Swiper('.swiper-container', {
     loop: true,
@@ -287,11 +287,6 @@ window.addEventListener('DOMContentLoaded', function () {
       disableOnInteraction: false,
       stopOnLastSlide: false,
     },
-    // breakpoints: {
-    //   640: {
-    //     height: 20
-    //   }
-    // }
   });
 };
 
@@ -313,6 +308,5 @@ window.addEventListener('DOMContentLoaded', function () {
       myMap.geoObjects.add(myPlacemark);
     };
   };
-
 
 });
