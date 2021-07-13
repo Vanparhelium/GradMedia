@@ -470,7 +470,7 @@ body {
   transform: scale(1.2, 1.2);
 }
 
-.portfolio__more {
+.arrow__link {
   position: relative;
   background-color: var(--litedark);
   padding: 30px 100px 37px;
@@ -479,12 +479,12 @@ body {
   line-height: 17px;
 }
 
-.portfolio__more:after {
+.arrow__link:after {
   position: absolute;
   content: '';
   bottom: 20%;
   left: 50%;
-  transform: translate(-20%, -50%);
+  transform: translate(-20%, -50%) rotate(180deg);
   width: 96px;
   height: 12px;
   background: url('../img/Arrow.svg') left center no-repeat ;
@@ -1402,15 +1402,15 @@ body {
     height: 100px;
   }
 
-  .portfolio__more {
+  .arrow__link {
     padding: 14px 50px 30px 28px;
     font-size: 14px;
     line-height: 16px;
   }
 
-  .portfolio__more:after {
+  .arrow__link:after {
     width: 55px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(180deg);
   }
 
   [class*="staff__photo"] {
@@ -1512,6 +1512,27 @@ body {
 }
 
 /* -----------------------------------thanks.html style -----------------------------------*/
+.home__link {
+  margin-top: 10px;
+  margin-left: 20%;
+  z-index: 12;
+}
+
+.home__link-arrow {
+  background-color: inherit;
+  padding: 0;
+}
+
+.home__link-arrow::after {
+    bottom: -15px;
+    left: -26px;
+    transform: rotate(0deg);
+    width: 134px;
+    height: 12px;
+    background: url(../img/arrow.png) left center no-repeat;
+    background-size: contain;
+}
+
 .header__relative {
   position: relative;
 }
@@ -1526,4 +1547,28 @@ body {
 
 .btn__big {
   margin-top: 100px;
+}
+
+@media (max-width: 992px) {
+  .home__link,
+  .logo {
+    margin: 3px auto;
+    text-align: center;
+  }
+
+.home__link-arrow::after  {
+  width: 110px;
+}
+}
+
+/* -----------------------------------contacts.html style -----------------------------------*/
+.section__grad {
+  padding: 120px 0 250px;
+}
+
+.contacts-title {
+  margin-bottom: 150px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 3vw;
 }

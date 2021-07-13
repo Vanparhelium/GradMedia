@@ -8,7 +8,6 @@ window.addEventListener('DOMContentLoaded', function () {
       let scroll = window.pageYOffset;
       let coord = document.documentElement.clientHeight;
       if (scroll > coord) {
-        console.log('hi');
         menuBg.classList.add('header__container_gray');
         menuBg.style.top = 0;
       };
@@ -17,6 +16,11 @@ window.addEventListener('DOMContentLoaded', function () {
       };
     };
 
+    if (document.querySelector('#siteBtn')) {
+      const siteBtn = document.querySelector('#siteBtn');
+      siteBtn.addEventListener('click', openModalSite);
+    }
+
     const menu = document.querySelector('.menu__list');
     const modal = document.querySelector('#modalCall');
     const modalBtn = document.querySelector('#callback');
@@ -24,7 +28,6 @@ window.addEventListener('DOMContentLoaded', function () {
     const modalBg = document.querySelector('.modal-bg');
     const recall = document.querySelector('#recall');
     const orderBtn = document.querySelector('.btn__order');
-    const siteBtn = document.querySelector('#siteBtn');
     const modalSite = document.querySelector('#modalSite')
     const closeOrder = document.querySelector('#closeOrder');
 
@@ -34,11 +37,11 @@ window.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('click', outsideClick);
 
     orderBtn.addEventListener('click', openModalSite);
-    siteBtn.addEventListener('click', openModalSite);
     closeOrder.addEventListener('click', closeModalSite);
 
 
     function openModal() {
+      modal.style.display = 'block';
       modal.classList.add('active');
       document.querySelectorAll('.modal__content').forEach(function (remActive) {
         remActive.classList.remove('modal__content_active');
@@ -53,16 +56,19 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     function closeModal() {
+      modal.style.display = 'none';
       modal.classList.remove('active');
       modalBg.classList.remove('active');
     };
 
     function openModalSite() {
+      modalSite.style.display = 'block';
       modalSite.classList.add('active');
       modalBg.classList.add('active');
     };
 
     function closeModalSite() {
+      modalSite.style.display = 'none';
       modalSite.classList.remove('active');
       modalBg.classList.remove('active');
     };
@@ -72,6 +78,8 @@ window.addEventListener('DOMContentLoaded', function () {
         modal.classList.remove('active');
         modalSite.classList.remove('active');
         modalBg.classList.remove('active');
+        modalSite.style.display = 'none';
+        modal.style.display = 'none';
       };
     };
 
@@ -80,7 +88,6 @@ window.addEventListener('DOMContentLoaded', function () {
       document.querySelector('#burger').classList.toggle('burger');
       document.querySelector('#burger').classList.toggle('burger__close');
     });
-
   };
 
 

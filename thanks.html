@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -9,16 +9,28 @@
   <link rel="stylesheet" href="css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
 </head>
 
 <body>
   <header class="header header__relative">
     <div class="logo"></div>
+    <div class="home__link">
+      <a href="index.html" class="arrow__link home__link-arrow">
+        <span>На главную</span>
+      </a>
+    </div>
     <div class="header__container">
       <ul class="menu__list">
-        <li class="menu__item"><a href="" class="menu__link">Разработка сайтов </a></li>
-        <li class="menu__item"><a href="" class="menu__link">Портфолио</a></li>
-        <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+        <li class="menu__item">
+          <a href="index.html" class="menu__link">Разработка сайтов </a>
+        </li>
+        <li class="menu__item">
+          <a href="portfolio.html" class="menu__link">Портфолио</a>
+        </li>
+        <li class="menu__item">
+          <a href="contacts.html" class="menu__link">Контакты</a>
+        </li>
       </ul>
       <div class="header__row">
         <div class="menu" id="menu">
@@ -47,7 +59,7 @@
             <p class="item__text">
               В течение 20 минут наш менеджер перезвонит вам!
             </p>
-            <div class="btn btn__big">На главную</div>
+            <a href="index.html" class="btn btn__big">На главную</a>
           </div>
         </div>
       </div>
@@ -79,6 +91,47 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal-bg"></div>
+  <div class="main-modal__tel col-12 col-lg-8 col-xxl-6" id="modalCall">
+    <div class="close__btn">
+      <div class="close" id="close"></div>
+    </div>
+    <div class="modal__content modal__content-step modal__content_active">
+      <a href="tel:+77273131880" class="modal__link-tel item__title">8 707 151 1511</a>
+      <div class="modal__row">
+        <a href="tel:+77273131880" class="btn modal__tel-btn item__title_uppercase">Позвонить</a>
+        <div class="btn modal__tel-btn item__title_uppercase" id="recall">Заказать звонок</div>
+      </div>
+    </div>
+    <div class="modal__content modal__content-step2">
+      <p class="modal__title">Оставьте заявку
+        Мы перезвоним вам!</p>
+      <form action="/thanks.html" method="GET" class="modal__form">
+        <input type="text" name="recall-name" id="recallName" class="modal__input" required placeholder="Имя*">
+        <input type="text" name="recall-company" id="recallCompany" class="modal__input" required
+          placeholder="Наименование компании*">
+        <input type="tel" name="recall-phone" id="recallPhone" class="modal__input" required placeholder="Телефон*">
+        <button type="submit" class="btn modal__form-btn item__title_uppercase">Заказать звонок</button>
+      </form>
+    </div>
+  </div>
+  <div class="main-modal__site col-12 col-lg-8 col-xxl-6" id="modalSite">
+    <div class="close__btn">
+      <div class="close" id="closeOrder"></div>
+    </div>
+    <div class="modal__content modal__content_visability">
+      <p class="modal__title">Оставьте заявку
+        Мы перезвоним вам!</p>
+      <form action="/thanks.html" method="GET" class="modal__form">
+        <input type="text" name="recall-name" id="siteName" class="modal__input" required placeholder="Имя*">
+        <input type="text" name="recall-company" id="siteCompany" class="modal__input" required
+          placeholder="Наименование компании*">
+        <input type="tel" name="recall-phone" id="sitePhone" class="modal__input" required placeholder="Телефон*">
+        <button type="submit" class="btn modal__form-btn item__title_uppercase">Заказать сайт</button>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты</title>
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <header class="header header__relative">
+    <div class="container">
+      <div class="header__row row">
+        <div class="logo col-xs-12 col-lg-6"></div>
+        <div class="home__link col-xs-12 col-lg-6">
+          <a href="index.html" class="arrow__link home__link-arrow">
+            <span>На главную</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header__container">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="index.html" class="menu__link">Разработка сайтов </a>
+        </li>
+        <li class="menu__item">
+          <a href="portfolio.html" class="menu__link">Портфолио</a>
+        </li>
+        <li class="menu__item">
+          <a href="contacts.html" class="menu__link">Контакты</a>
+        </li>
+      </ul>
+      <div class="header__row">
+        <div class="menu" id="menu">
+          <div class="burger" id="burger"></div>
+        </div>
+
+        <a href="index.html" class="link-main">вернуться на главную</a>
+        <div class="call" id="callback"></div>
+      </div>
+      <button class="btn btn__order">
+        <span class="btn__line"></span>
+        заказать сайт
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section__grad">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12">
+            <p class="contacts-title item__title_uppercase">контакты grad media group</p>
+          </div>
+        </div>
+      </div>
+      <div class="container section__contacts">
+        <div class="row">
+          <div class="col-xxl-5">
+            <div class="contacts">
+              <h4 class="contacts__title">Контакты</h4>
+              <div class="item__title">
+                <span>г. Алматы, проспект Райымбека, 160а, офис&nbsp;106</span>
+                <a href="tel:+77273131880" class="contacts__link">+7 727 313-18-80</a>
+                <a href="mailto:info@gradmedia.kz" class="contacts__link">info@gradmedia.kz</a>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-xxl-7">
+            <div class="contacts__map">
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row footer__row">
+        <div class="col-xxl-3 col-lg-5 col-12 footer__logo-block">
+          <a href="index.html">
+            <img src="img/logo2.png" alt="Grand media group" class="footer__logo">
+          </a>
+          <p class="footer__text">Все права защищены, &#169;&nbsp;2010-2021</p>
+        </div>
+        <div class="footer__contacts col-xxl-4 col-lg-7 col-12">
+          <span>г. Алматы, проспект Райымбека, 160а, офис&nbsp;106</span>
+          <p class="footer__text">БИН 140540017426</p>
+        </div>
+        <div class="col-xxl-2 col-lg-5 col-sm-12 footer__tel">
+          <a href="tel:+77273131880" class="footer__link footer__link-tel">+7 727 313-18-80</a>
+        </div>
+        <div class="col-xxl-3 col-lg-7 col-12 footer__social">
+          <a href="mailto:info@gradmedia.kz" class="footer__link">info@gradmedia.kz</a>
+          <i class="social__link social__link-insta"></i>
+          <i class="social__link social__link-fb"></i>
+          <p class="footer__text">Политика конфиденциальности</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-bg"></div>
+  <div class="main-modal__tel col-12 col-lg-8 col-xxl-6" id="modalCall">
+    <div class="close__btn">
+      <div class="close" id="close"></div>
+    </div>
+    <div class="modal__content modal__content-step modal__content_active">
+      <a href="tel:+77273131880" class="modal__link-tel item__title">8 707 151 1511</a>
+      <div class="modal__row">
+        <a href="tel:+77273131880" class="btn modal__tel-btn item__title_uppercase">Позвонить</a>
+        <div class="btn modal__tel-btn item__title_uppercase" id="recall">Заказать звонок</div>
+      </div>
+    </div>
+    <div class="modal__content modal__content-step2">
+      <p class="modal__title">Оставьте заявку
+        Мы перезвоним вам!</p>
+      <form action="/thanks.html" method="GET" class="modal__form">
+        <input type="text" name="recall-name" id="recallName" class="modal__input" required placeholder="Имя*">
+        <input type="text" name="recall-company" id="recallCompany" class="modal__input" required
+          placeholder="Наименование компании*">
+        <input type="tel" name="recall-phone" id="recallPhone" class="modal__input" required placeholder="Телефон*">
+        <button type="submit" class="btn modal__form-btn item__title_uppercase">Заказать звонок</button>
+      </form>
+    </div>
+  </div>
+  <div class="main-modal__site col-12 col-lg-8 col-xxl-6" id="modalSite">
+    <div class="close__btn">
+      <div class="close" id="closeOrder"></div>
+    </div>
+    <div class="modal__content modal__content_visability">
+      <p class="modal__title">Оставьте заявку
+        Мы перезвоним вам!</p>
+      <form action="/thanks.html" method="GET" class="modal__form">
+        <input type="text" name="recall-name" id="siteName" class="modal__input" required placeholder="Имя*">
+        <input type="text" name="recall-company" id="siteCompany" class="modal__input" required
+          placeholder="Наименование компании*">
+        <input type="tel" name="recall-phone" id="sitePhone" class="modal__input" required placeholder="Телефон*">
+        <button type="submit" class="btn modal__form-btn item__title_uppercase">Заказать сайт</button>
+        </form>
+    </div>
+  </div>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+
+</body>
+
+</html>
