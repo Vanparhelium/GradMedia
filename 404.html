@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Контакты</title>
+  <title>404</title>
   <link rel="stylesheet" href="css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -15,12 +15,16 @@
 <body>
   <header class="header header__relative">
     <div class="container">
-      <div class="header__row row">
-        <div class="logo col-xs-12 col-lg-6"></div>
-        <div class="home__link col-xs-12 col-lg-6">
-          <a href="index.html" class="arrow__link home__link-arrow">
-            <span>На главную</span>
-          </a>
+      <div class="row">
+        <div class="col-12 col-xl-6">
+          <div class="logo"></div>
+        </div>
+        <div class="col-12 col-xl-6">
+          <div class="home__link">
+            <a href="index.html" class="arrow__link home__link-arrow">
+              <span>На главную</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -52,36 +56,53 @@
   </header>
 
   <main>
-    <section class="section__grad">
+    <section class="error__section">
       <div class="container">
         <div class="row justify-content-center align-items-center">
-          <div class="col-12">
-            <p class="contacts-title item__title_uppercase">контакты grad media group</p>
+          <div class="col-12 col-lg-6">
+            <p class="error__title">404</p>
+            <p class="error__text">
+              УПС
+            </p>
+          </div>
+          <div class="col-12 col-lg-4">
+            <img src="img/gagarin2.svg" alt="">
+            <p class="item__text">
+              Такой страницы нет, но вы можете посмотреть описание&nbsp;нескольких наших лучших работ:
+            </p>
+          </div>
+        </div>
+
+
+
+      </div>
+      <ul class="section__row error__work">
+        <li class="portfolio__box visible" data-work="landings">
+          <img src="img/aksay.jpg" alt="" class="portfolio__box-img portfolio__box-img_opacity">
+          <div class="portfolio__box-text">
+            <p class="box__title">Aksay</p>
+            <p class="box__text">Продуктовая марка</p>
+            <p class="box__text">Landing Page с элементами блога</p>
+          </div>
+          <a href="" class="portfolio__box-link"></a>
+        </li>
+        <li class="portfolio__box visible" data-work="landings">
+          <img src="img/aksay.jpg" alt="" class="portfolio__box-img">
+          <a href="" class="portfolio__box-link"></a>
+        </li>
+        <li class="portfolio__box visible" data-work="corporate">
+          <img src="img/slang.jpg" alt="" class="portfolio__box-img">
+          <a href="" class="portfolio__box-link"></a>
+        </li>
+      </ul>
+      <div class="container error__btn">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-3 col-6">
+            <a href="index.html" class="btn btn__big">На главную</a>
           </div>
         </div>
       </div>
-
     </section>
-    <div class="section__contacts section__contacts_bottom">
-      <div class="row">
-        <div class="col-xxl-5">
-          <div class="contacts contacts__block">
-            <h4 class="contacts__title">Контакты</h4>
-            <div class="item__title">
-              <span>г. Алматы, проспект Райымбека, 160а, офис&nbsp;106</span>
-              <a href="tel:+77273131880" class="contacts__link">+7 727 313-18-80</a>
-              <a href="mailto:info@gradmedia.kz" class="contacts__link">info@gradmedia.kz</a>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-xxl-7">
-          <div class="contacts__map">
-            <div id="map"></div>
-          </div>
-        </div>
-      </div>
-    </div>
   </main>
 
   <footer class="footer">
@@ -91,7 +112,7 @@
           <a href="index.html">
             <img src="img/logo2.png" alt="Grand media group" class="footer__logo">
           </a>
-          <p class="footer__text">Все права защищены, &#169;&nbsp;2010-2021</p>
+          <p class="footer__text">Все права защищены, &#169;&nbsp; 2010-2021</p>
         </div>
         <div class="footer__contacts col-xxl-4 col-lg-7 col-12">
           <span>г. Алматы, проспект Райымбека, 160а, офис&nbsp;106</span>
@@ -147,12 +168,9 @@
           placeholder="Наименование компании*">
         <input type="tel" name="recall-phone" id="sitePhone" class="modal__input" required placeholder="Телефон*">
         <button type="submit" class="btn modal__form-btn item__title_uppercase">Заказать сайт</button>
-        </form>
+      </form>
     </div>
   </div>
-
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-
 </body>
 
 </html>
