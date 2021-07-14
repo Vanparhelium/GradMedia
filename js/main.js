@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', function () {
       };
       if (scroll < coord) {
         menuBg.classList.remove('header__container_gray');
+        menuBg.style.top = "60px";
       };
     };
 
