@@ -952,9 +952,9 @@ body {
   text-align: center;
   background: var(--white);
   transform: translate(-50%, -50%);
-  transition-property: visibility, opacity;
+  /* transition-property: visibility, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .3s;
+  transition-duration: .3s; */
 }
 
 .active {
@@ -1529,7 +1529,7 @@ body {
     transform: rotate(0deg);
     width: 134px;
     height: 12px;
-    background: url(../img/arrow.png) left center no-repeat;
+    background: url('../img/arrow.png') left center no-repeat;
     background-size: contain;
 }
 
