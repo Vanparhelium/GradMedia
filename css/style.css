@@ -1716,7 +1716,8 @@ body {
 
 .layout__img-notebook {
   height: 500px;
-  width: 970px;
+  width: 900px;
+  margin-left: 150px;
   background: url('../img/layout-notebook.png') center center no-repeat;
   background-size: contain;
 }
@@ -1725,7 +1726,7 @@ body {
   position: relative;
   height: 420px;
   width: 270px;
-  background: url(../img/tab-img.png) 33px 48px no-repeat;
+  background: url('../img/tab-img.png') 33px 48px no-repeat;
   background-size: contain;
 }
 
@@ -1794,4 +1795,37 @@ body {
   .work__logo {
     display: none;
   }
+
+  .k-generation__hero {
+    padding-top: 95px;
+  }
+
+  .ubuntu__title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .work__list {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .work__item::marker {
+    font-size: 22px;
+  }
+
+  .layout__img-notebook {
+    margin: -60px;
+  }
+
+  .layout__img-tab {
+    height: 393px;
+    width: 217px;
+    background: url('../img/tab-img.png') 27px 52px no-repeat;
+  }
+
+  .layout__img-tab::after {
+    width: 230px;
+  }
+
 }
