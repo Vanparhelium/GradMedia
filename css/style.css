@@ -52,6 +52,11 @@ ul {
   list-style: none;
 }
 
+ol {
+  margin: 0;
+  padding: 0 20px;
+}
+
 img {
   max-width: 100%;
 }
@@ -1670,17 +1675,18 @@ body {
 /* work-done */
 .work-done {
   margin-top: -1px;
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, #0E0E0E 100%), url('../img/shutterstock.png') 1100px  -60% no-repeat, url('../img/shutterstock.png') 1500px no-repeat, url('../img/shutterstock.png') left top repeat;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, #0E0E0E 100%), url('../img/shutterstock.png') 1100px  460% no-repeat, url('../img/shutterstock.png') 1500px no-repeat, url('../img/shutterstock.png') left top repeat;
   mix-blend-mode: lighten;
 }
 
 .ubuntu__title-list {
-  text-align-last: left;
+  text-align: left;
 }
 
 .generation-menu__img {
   margin: 50px 0;
   width: 100%;
+  cursor: pointer;
 }
 
 .generation-info__img {
@@ -1706,7 +1712,7 @@ body {
   position: absolute;
   content: '';
   top: 0;
-  left: -40px;
+  left: -20px;
   height: 100%;
   width: 100vw;
   background: rgba(196, 196, 196, 0.2);
@@ -1717,7 +1723,6 @@ body {
 .layout__img-notebook {
   height: 500px;
   width: 900px;
-  margin-left: 150px;
   background: url('../img/layout-notebook.png') center center no-repeat;
   background-size: contain;
 }
@@ -1726,39 +1731,16 @@ body {
   position: relative;
   height: 420px;
   width: 270px;
-  background: url('../img/tab-img.png') 33px 48px no-repeat;
-  background-size: contain;
-}
-
-.layout__img-tab::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 25px;
   background: url('../img/tab.png') center center no-repeat;
   background-size: contain;
 }
 
 .layout__img-telephone {
   position: relative;
-  margin-bottom: 68px;
   height: 235px;
   width: 145px;
-  background: url('../img/telephone-img.png') center bottom no-repeat;
+  background: url('../img/tab-img.png') center bottom no-repeat;
   background-size: contain;
-}
-
-.layout__img-telephone::after {
- position: absolute;
- top: -35px;
- left: 0;
- height: 300px;
- width: 100%;
- content: '';
- background: url('../img/elephone.png') center 20% no-repeat;
- background-size: contain;
 }
 
 .wp__container {
@@ -1800,6 +1782,10 @@ body {
     padding-top: 95px;
   }
 
+  .generation-menu__img {
+    margin: 20px 0;
+}
+
   .ubuntu__title {
     font-size: 26px;
     line-height: 36px;
@@ -1815,17 +1801,36 @@ body {
   }
 
   .layout__img-notebook {
-    margin: -60px;
+    height: 270px;
   }
 
   .layout__img-tab {
     height: 393px;
     width: 217px;
-    background: url('../img/tab-img.png') 27px 52px no-repeat;
   }
 
-  .layout__img-tab::after {
-    width: 230px;
+  .btn-back {
+    padding: 14px 35px;
+    font-size: 16px;
+  }
+
+  .work__row_overflow {
+    overflow: auto;
+  }
+
+  .generation-info__img:last-child {
+    margin-top: 6px;
+    margin-bottom: 0px;
+  }
+
+  .generation-menu__img:hover,
+  .generation-menu__img:focus,
+  .generation-info__img:focus,
+  .generation-info__img:hover,
+  .dising__img:focus,
+  .dising__img:hover {
+    transform: scale(2);
+    transform-origin: top left;
   }
 
 }
