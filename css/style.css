@@ -1780,7 +1780,7 @@ body {
 }
 
 .section__bg-error {
-  background: url('../img/layer1.png') center center no-repeat;
+  background: url('../img/layer1.png') center bottom no-repeat;
   background-size: contain;
 }
 
