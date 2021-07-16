@@ -1710,7 +1710,11 @@ body {
 
 .dising__img {
   margin-top: 25px;
-  margin-bottom: 95px;
+  /* margin-bottom: 95px; */
+}
+
+.layout__item {
+  margin-top: 95px;
 }
 
 .leyout-block {
@@ -1938,4 +1942,59 @@ body {
     filter: opacity(0.5);
     background-size: contain;
   }
+}
+
+/*---------------------------------------- kfw.html-style-------------------------------------------- */
+.main-kfw {
+  background: var(--blackdark);
+}
+
+.kfw__hero {
+  height: 100%;
+  background: linear-gradient(0deg, #000000 3.05%, rgba(0, 0, 0, 0) 37.96%), url('../img/kfw-hero.png') center top no-repeat;
+  background-size: contain;
+}
+
+.neon__container {
+  position: relative;
+  padding: 150px;
+}
+
+.neon__container::before {
+  position: absolute;
+  content: '';
+  left: -30%;
+  top: -3%;
+  width: 100%;
+  height: 110%;
+  background: url('../img/neon.png') left top no-repeat;
+  background-size: contain;
+}
+
+.neon__container::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 35%;
+  width: 100%;
+  height: 100%;
+  background: url('../img/multidevices.png') center bottom no-repeat;
+  background-size: content;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bitrix__container {
+  width: 100%;
+  height: 100%;
+  background: url('../img/crm-bg.png') center center no-repeat;
+  background-size: cover;
+  margin-bottom: 170px;
+}
+
+.bitrix__img {
+  margin-top: 90px;
+  margin-bottom: 450px;
 }
