@@ -36,6 +36,7 @@
   --litedark: #737373;
   --liteblack: #323232;
   --black: #353535;
+  --blackdark: #000000;
 }
 
 * {
@@ -1627,7 +1628,7 @@ body {
   padding-bottom: 60px;
 }
 
-.k-generation__hero-img {
+.hero-logo {
   filter: brightness(1.2);
 }
 
@@ -1643,6 +1644,7 @@ body {
 }
 
 .work__list {
+  z-index: 1;
   margin-top: 80px;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
@@ -1683,7 +1685,6 @@ body {
 
 /* work-done */
 .work-done {
-  margin-top: -1px;
   background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, #0E0E0E 100%), url('../img/shutterstock.png') 1100px  460% no-repeat, url('../img/shutterstock.png') 1500px no-repeat, url('../img/shutterstock.png') left top repeat;
   mix-blend-mode: lighten;
 }
@@ -1758,6 +1759,7 @@ body {
 
 .work__item::marker {
   font-size: 28px;
+  font-weight: 700;
 }
 
 .back {
@@ -1847,5 +1849,93 @@ body {
   .dising__img:hover {
     transform: scale(2);
     transform-origin: top left;
+  }
+}
+
+/* --------------------------------Royal Med.html-style------------------------- */
+.header-mr {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.rm__hero {
+  position: relative;
+  height: 100%;
+  background: url('../img/rm1.png') center center no-repeat;
+  background-size: cover;
+}
+
+.work__text_black {
+  color: var(--blackdark);
+}
+
+.rm-hero__bg_bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 340px;
+  background: linear-gradient(180deg, rgba(225, 162, 126, 0) 0%, #DFA37A 99.48%);
+}
+
+.main-rm {
+  background: linear-gradient(180deg, #DBA574 0%, #F39A9A 100%);
+}
+
+.work-performed {
+  position: relative;
+  overflow: hidden;
+}
+
+.rm__hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 26%;
+  background: url('../img/Asset.png') right top no-repeat;
+  z-index: 0;
+}
+
+.background-container {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.work-performed__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -15%;
+  background: url('../img/Asset.png') left center no-repeat;
+  z-index: 0;
+  transform: rotate(-157.78deg);
+}
+
+.work-performed__bg2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 16%;
+  left: -10%;
+  background: url('../img/Asset.png') right top no-repeat;
+  z-index: 0;
+  transform: scaleX(-1);
+}
+
+.container-work {
+  padding: 0 250px;
+}
+
+@media (max-width: 1600px) {
+  .container-work {
+    padding: 0;
+  }
+
+  .work-performed__bg2,
+  .work-performed__bg,
+  .rm__hero-bg {
+    filter: opacity(0.5);
+    background-size: contain;
   }
 }
