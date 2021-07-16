@@ -1958,16 +1958,16 @@ body {
 
 .neon__container {
   position: relative;
-  padding: 150px;
+  padding: 100px 150px;
 }
 
 .neon__container::before {
   position: absolute;
   content: '';
-  left: -30%;
-  top: -3%;
-  width: 100%;
-  height: 110%;
+  left: -45%;
+  top: -20%;
+  width: 120%;
+  height: 150%;
   background: url('../img/neon.png') left top no-repeat;
   background-size: contain;
 }
@@ -1999,4 +1999,81 @@ body {
 .bitrix__img {
   margin-top: 90px;
   margin-bottom: 450px;
+}
+
+@media (max-width:1800px) {
+  .neon__container {
+    padding: 100px;
+  }
+
+  .neon__container::before {
+    position: absolute;
+    content: '';
+    left: -45%;
+    top: -10%;
+    width: 130%;
+    height: 150%;
+    background: url('../img/neon.png') left top no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (max-width:1600px) {
+  .neon__container {
+    padding: 100px;
+  }
+
+  .neon__container::after {
+    left: 50%;
+  }
+
+  .neon__container::before {
+    left: -45%;
+    top: -20%;
+    width: 130%;
+    height: 150%;
+    background: url('../img/neon.png') left top no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (max-width:1200px) {
+  .neon__container {
+    padding: 80px;
+  }
+
+  .neon__container::after {
+    left: 50%;
+  }
+
+  .neon__container::before {
+    left: -50%;
+    top: -14%;
+    width: 150%;
+    height: 170%;
+    background: url('../img/neon.png') left top no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (max-width:992px) {
+  .neon__container {
+    padding: 0 20px;
+    z-index: 2;
+  }
+
+  .neon__container::after {
+    display: none;
+  }
+
+  .neon__container::before {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/neon.png') left top no-repeat;
+    background-size: contain;
+    z-index: -1;
+    filter: invert(1);
+  }
 }
