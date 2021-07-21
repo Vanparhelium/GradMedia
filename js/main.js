@@ -6,15 +6,31 @@ window.addEventListener('DOMContentLoaded', function () {
     window.onscroll = function () {
       let menuBg = document.querySelector('.header__container');
       let scroll = window.pageYOffset;
-      let coord = document.documentElement.clientHeight;
-      if (scroll > coord) {
+
+      if (scroll > 60) {
         menuBg.classList.add('header__container_gray');
-        menuBg.style.top = 0;
-      };
-      if (scroll < coord) {
+      }
+      if (scroll < 90) {
         menuBg.classList.remove('header__container_gray');
-        // menuBg.style.top = "60px";
-      };
+      }
+
+      // if (scroll > 50) {
+
+      //     menuBg.style.top = 0;
+      // } else {
+      //   menuBg.style.top = "60px";
+      // }
+
+      // let coord = document.documentElement.clientHeight;
+
+      // if (scroll > coord) {
+      //   menuBg.classList.add('header__container_gray');
+      //   menuBg.style.top = 0;
+      // };
+      // if (scroll < coord) {
+      //   menuBg.classList.remove('header__container_gray');
+      //   // menuBg.style.top = "60px";
+      // };
     };
 
     if (document.querySelector('#siteBtn')) {
