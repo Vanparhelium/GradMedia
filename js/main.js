@@ -7,10 +7,10 @@ window.addEventListener('DOMContentLoaded', function () {
       let menuBg = document.querySelector('.header__container');
       let scroll = window.pageYOffset;
 
-      if (scroll > 60) {
+      if (scroll > 120) {
         menuBg.classList.add('header__container_gray');
       }
-      if (scroll < 90) {
+      else {
         menuBg.classList.remove('header__container_gray');
       }
 
