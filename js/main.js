@@ -13,24 +13,6 @@ window.addEventListener('DOMContentLoaded', function () {
       else {
         menuBg.classList.remove('header__container_gray');
       }
-
-      // if (scroll > 50) {
-
-      //     menuBg.style.top = 0;
-      // } else {
-      //   menuBg.style.top = "60px";
-      // }
-
-      // let coord = document.documentElement.clientHeight;
-
-      // if (scroll > coord) {
-      //   menuBg.classList.add('header__container_gray');
-      //   menuBg.style.top = 0;
-      // };
-      // if (scroll < coord) {
-      //   menuBg.classList.remove('header__container_gray');
-      //   // menuBg.style.top = "60px";
-      // };
     };
 
     if (document.querySelector('#siteBtn')) {
@@ -41,7 +23,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const menu = document.querySelector('.menu__list');
     const modal = document.querySelector('#modalCall');
     const modalBtn = document.querySelector('#callback');
-    const closeBtn = document.querySelector('#close');
+    const closeBtn = document.querySelector('.close__btn');
     const modalBg = document.querySelector('.modal-bg');
     const recall = document.querySelector('#recall');
     const orderBtn = document.querySelector('.btn__order');
@@ -52,14 +34,20 @@ window.addEventListener('DOMContentLoaded', function () {
     modalBtn.addEventListener('click', openModal);
     closeBtn.addEventListener('click', closeModal);
     window.addEventListener('click', outsideClick);
-
     orderBtn.addEventListener('click', openModalSite);
     closeOrder.addEventListener('click', closeModalSite);
+
+    function timeoutModal() {
+      timeout = setTimeout(modal.style.display = 'none', 2500);
+    };
+    function timeoutSite() {
+      timeoutId = setTimeout(modalSite.style.display = 'none', 2500);
+    };
 
 
     function openModal() {
       modal.style.display = 'block';
-      modal.classList.add('active');
+      modal.classList.add('active__modal');
       document.querySelectorAll('.modal__content').forEach(function (remActive) {
         remActive.classList.remove('modal__content_active');
       });
@@ -73,30 +61,30 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     function closeModal() {
-      modal.style.display = 'none';
-      modal.classList.remove('active');
+      timeoutModal;
+      modal.classList.remove('active__modal');
       modalBg.classList.remove('active');
     };
 
     function openModalSite() {
       modalSite.style.display = 'block';
-      modalSite.classList.add('active');
+      modalSite.classList.add('active__modal');
       modalBg.classList.add('active');
     };
 
     function closeModalSite() {
-      modalSite.style.display = 'none';
-      modalSite.classList.remove('active');
+      timeoutSite;
+      modalSite.classList.remove('active__modal');
       modalBg.classList.remove('active');
     };
 
     function outsideClick(e) {
       if (e.target === modalBg) {
-        modal.classList.remove('active');
-        modalSite.classList.remove('active');
+        modal.classList.remove('active__modal');
+        modalSite.classList.remove('active__modal');
         modalBg.classList.remove('active');
-        modalSite.style.display = 'none';
-        modal.style.display = 'none';
+        timeoutSite;
+        timeoutModal;
       };
     };
 

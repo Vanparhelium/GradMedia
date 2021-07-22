@@ -573,6 +573,13 @@ body {
   padding: 18px 22px;
   border: none;
   background: var(--grey1);
+  transition: all .3s ease-in-out;
+}
+
+.more-info__input:hover,
+.more-info__input:focus {
+  outline: 2px solid var(--green2);
+  box-shadow: 0 0 5px 3px var(--green2) ;
 }
 
 .more-info__input::placeholder {
@@ -615,11 +622,9 @@ body {
 .check + span:after {
   content: url('../img/v.svg');
   position: absolute;
-width: 100%;
-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity .3s ease-in-out;
 }
@@ -961,6 +966,7 @@ height: 100%;
 }
 
 [class*="main-modal"] {
+  display: none;
   position: fixed;
   max-width: 650px;
   visibility: hidden;
@@ -970,15 +976,19 @@ height: 100%;
   z-index: 10;
   text-align: center;
   background: var(--white);
-  transform: translate(-50%, -50%);
-  /* transition-property: visibility, opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: .3s; */
+  transform: translate(-50%, -50%) scale(0.01);
+  transition: all .5s ease-in-out;
 }
 
 .active {
   visibility: visible;
   opacity: 1;
+}
+
+.active__modal {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .modal__link-tel {
@@ -1430,6 +1440,10 @@ height: 100%;
   .check__lable {
     font-size: 10px;
     line-height: 18px;
+  }
+
+  .check + span:after {
+    top: 50%;
   }
 
   .arrow__link {
