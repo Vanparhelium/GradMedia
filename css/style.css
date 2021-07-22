@@ -576,12 +576,6 @@ body {
   transition: all .3s ease-in-out;
 }
 
-.more-info__input:hover,
-.more-info__input:focus {
-  outline: 2px solid var(--green2);
-  box-shadow: 0 0 5px 3px var(--green2) ;
-}
-
 .more-info__input::placeholder {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -1072,10 +1066,19 @@ body {
   padding: 10px 10px;
   border: none;
   border-bottom: 1px solid #000;
+  transition: all .3s ease-in-out;
 }
 
 .modal__input::placeholder {
   font-style: italic;
+}
+
+.modal__input:hover,
+.modal__input:focus,
+.more-info__input:hover,
+.more-info__input:focus {
+  outline: 2px solid var(--green2);
+  box-shadow: 0 0 5px 3px var(--green2) ;
 }
 
 /* ----------------------------- adaptive index.html ------------------------- */
