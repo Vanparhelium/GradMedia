@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const orderBtn = document.querySelector('.btn__order');
     const modalSite = document.querySelector('#modalSite')
     const closeOrder = document.querySelector('#closeOrder');
-
+    const menuList = document.querySelector('.menu__list');
 
     modalBtn.addEventListener('click', openModal);
     closeBtn.addEventListener('click', closeModal);
@@ -88,10 +88,20 @@ window.addEventListener('DOMContentLoaded', function () {
       };
     };
 
+
+
     document.querySelector('#menu').addEventListener('click', function () {
-      document.querySelector('.menu__list').classList.toggle('menu__list_visible');
+      menuList.classList.toggle('menu__list_visible');
       document.querySelector('#burger').classList.toggle('burger');
       document.querySelector('#burger').classList.toggle('burger__close');
+      window.addEventListener('click', function (x){
+        if (x.target !== menuList & x.target !== document.querySelector('#menu') & x.target !== document.querySelector('.menu__list_visible') & x.target !== document.querySelector('#burger')) {
+          console.log('hi')
+          menuList.classList.remove('menu__list_visible');
+          document.querySelector('#burger').classList.add('burger');
+          document.querySelector('#burger').classList.remove('burger__close');
+        }
+      });
     });
   };
 
